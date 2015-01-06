@@ -13,6 +13,7 @@
 		CDA300AE1A5C464200084105 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA300AD1A5C464200084105 /* Images.xcassets */; };
 		CDA300B11A5C464200084105 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA300AF1A5C464200084105 /* LaunchScreen.xib */; };
 		CDA300BD1A5C464200084105 /* TaskItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA300BC1A5C464200084105 /* TaskItTests.swift */; };
+		CDA300C71A5C4F5800084105 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA300C61A5C4F5800084105 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		CDA300B61A5C464200084105 /* TaskItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA300BB1A5C464200084105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDA300BC1A5C464200084105 /* TaskItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItTests.swift; sourceTree = "<group>"; };
+		CDA300C61A5C4F5800084105 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				CDA300A61A5C464200084105 /* AppDelegate.swift */,
 				CDA300A81A5C464200084105 /* ViewController.swift */,
 				CDA300AA1A5C464200084105 /* Main.storyboard */,
+				CDA300C61A5C4F5800084105 /* TaskCell.swift */,
 				CDA300AD1A5C464200084105 /* Images.xcassets */,
 				CDA300AF1A5C464200084105 /* LaunchScreen.xib */,
 				CDA300A41A5C464200084105 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA300A91A5C464200084105 /* ViewController.swift in Sources */,
+				CDA300C71A5C4F5800084105 /* TaskCell.swift in Sources */,
 				CDA300A71A5C464200084105 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
