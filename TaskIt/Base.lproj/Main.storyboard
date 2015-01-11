@@ -135,7 +135,11 @@
                                 <action selector="cancelButtonTapped:" destination="hZC-dQ-8XO" id="Jdf-lE-zW2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="N9f-rb-AHM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="N9f-rb-AHM">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="hZC-dQ-8XO" id="y9s-gB-CGi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -208,6 +212,9 @@
                                 <state key="normal" title="Add Task">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTaskButtonTapped:" destination="vEX-Xy-i6e" eventType="touchUpInside" id="4Ei-bG-Jnm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
