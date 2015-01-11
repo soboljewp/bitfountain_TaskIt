@@ -12,23 +12,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
-    var taskArray: [Dictionary<String,String>] = []
+    var taskArray: [TaskModel] = []
     
     // MARK: overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let task1:Dictionary<String,String> = ["task": "Study French", "subtask": "Verbs", "date": "01/14/2014"]
-        let task2:Dictionary<String,String> = ["task": "Eat Dinner", "subtask": "Burgers", "date": "01/14/2014"]
-        let task3:Dictionary<String,String> = ["task": "Go to gym", "subtask": "Leg day", "date": "01/15/2014"]
-        taskArray = [task1, task2, task3]
+        
+        let date1 = Date.from(year: 2014, month: 05, day: 20)
+        let date2 = Date.from(year: 2014, month: 03, day: 3)
+        let date3 = Date.from(year: 2014, month: 12, day: 13)
+        
+        let task1 = TaskModel(task: "Study French", subTask: "Verbs", date: date1)
+        let task2 = TaskModel(task: "Eat Dinner", subTask: "Burgers", date: date2)
+        
+        taskArray = [task1, task2, TaskModel(task: "Go to gym", subTask: "Leg Day", date: date3)]
+        
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showTaskDetail" {
+            let detailVC: TaskDetailViewController = segue.destinationViewController as TaskDetailViewController
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            let thisTask = taskArray[indexPath!.row]
+            detailVC.detailTaskModel = thisTask
+        }
+    }
+    
+    @IBAction func addButtonTapped(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("showTaskAdd", sender: self)
+    }
+    
 
     // MARK: UITableViewDataSource
     
@@ -38,13 +60,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let taskDict: Dictionary = taskArray[indexPath.row]
+        let thisTask: TaskModel = taskArray[indexPath.row]
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCell
         
-        cell.taskLabel.text = taskDict["task"]
-        cell.descriptionLabel.text = taskDict["subtask"]
-        cell.dateLabel.text = taskDict["date"]
+        cell.taskLabel.text = thisTask.task
+        cell.descriptionLabel.text = thisTask.subTask
+        cell.dateLabel.text = Date.toString(date: thisTask.date)
         
         return cell
     }
@@ -52,7 +74,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println(indexPath.row)
         
+        performSegueWithIdentifier("showTaskDetail", sender: self)
     }
 }
 

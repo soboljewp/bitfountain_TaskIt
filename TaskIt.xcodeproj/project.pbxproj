@@ -14,6 +14,10 @@
 		CDA300B11A5C464200084105 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA300AF1A5C464200084105 /* LaunchScreen.xib */; };
 		CDA300BD1A5C464200084105 /* TaskItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA300BC1A5C464200084105 /* TaskItTests.swift */; };
 		CDA300C71A5C4F5800084105 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA300C61A5C4F5800084105 /* TaskCell.swift */; };
+		CDA443961A5DA20E0010F81B /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA443951A5DA20E0010F81B /* TaskModel.swift */; };
+		CDA443981A5DA6F70010F81B /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA443971A5DA6F70010F81B /* TaskDetailViewController.swift */; };
+		CDA484E41A62883B00B904C1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA484E31A62883B00B904C1 /* Date.swift */; };
+		CDA484E61A6293D000B904C1 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA484E51A6293D000B904C1 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		CDA300BB1A5C464200084105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDA300BC1A5C464200084105 /* TaskItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItTests.swift; sourceTree = "<group>"; };
 		CDA300C61A5C4F5800084105 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		CDA443951A5DA20E0010F81B /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		CDA443971A5DA6F70010F81B /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		CDA484E31A62883B00B904C1 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CDA484E51A6293D000B904C1 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +88,13 @@
 			isa = PBXGroup;
 			children = (
 				CDA300A61A5C464200084105 /* AppDelegate.swift */,
+				CDA484E31A62883B00B904C1 /* Date.swift */,
 				CDA300A81A5C464200084105 /* ViewController.swift */,
+				CDA443971A5DA6F70010F81B /* TaskDetailViewController.swift */,
+				CDA484E51A6293D000B904C1 /* AddTaskViewController.swift */,
 				CDA300AA1A5C464200084105 /* Main.storyboard */,
 				CDA300C61A5C4F5800084105 /* TaskCell.swift */,
+				CDA443951A5DA20E0010F81B /* TaskModel.swift */,
 				CDA300AD1A5C464200084105 /* Images.xcassets */,
 				CDA300AF1A5C464200084105 /* LaunchScreen.xib */,
 				CDA300A41A5C464200084105 /* Supporting Files */,
@@ -216,8 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA300A91A5C464200084105 /* ViewController.swift in Sources */,
+				CDA484E41A62883B00B904C1 /* Date.swift in Sources */,
 				CDA300C71A5C4F5800084105 /* TaskCell.swift in Sources */,
+				CDA443961A5DA20E0010F81B /* TaskModel.swift in Sources */,
 				CDA300A71A5C464200084105 /* AppDelegate.swift in Sources */,
+				CDA443981A5DA6F70010F81B /* TaskDetailViewController.swift in Sources */,
+				CDA484E61A6293D000B904C1 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +427,7 @@
 				CDA300C21A5C464200084105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDA300C31A5C464200084105 /* Build configuration list for PBXNativeTarget "TaskItTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +436,7 @@
 				CDA300C51A5C464200084105 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
