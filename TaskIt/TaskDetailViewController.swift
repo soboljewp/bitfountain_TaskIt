@@ -11,11 +11,11 @@ import UIKit
 class TaskDetailViewController: UIViewController {
     
     var detailTaskModel: TaskModel!
-    var mainVC: ViewController!
     
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var subTaskTextField: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
+    @IBOutlet weak var completedSwitch: UISwitch!
     
     
     override func viewDidLoad() {
@@ -24,8 +24,9 @@ class TaskDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.taskTextField.text = detailTaskModel.task
-        self.subTaskTextField.text = detailTaskModel.subTask
+        self.subTaskTextField.text = detailTaskModel.subtask
         self.dueDatePicker.date = detailTaskModel.date
+        self.completedSwitch.on = detailTaskModel.completed.boolValue
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +39,14 @@ class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(sender: UIBarButtonItem) {
+        let appDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         
-        var task = TaskModel(task: taskTextField.text, subTask: subTaskTextField.text, date: dueDatePicker.date, completed: false)
-        mainVC.baseArray[0][mainVC.tableView.indexPathForSelectedRow()!.row] = task
+        detailTaskModel.task = taskTextField.text
+        detailTaskModel.subtask = subTaskTextField.text
+        detailTaskModel.date = dueDatePicker.date
+        detailTaskModel.completed = completedSwitch.on
+        
+        appDelegate.saveContext()
         
         self.navigationController?.popViewControllerAnimated(true)
     }

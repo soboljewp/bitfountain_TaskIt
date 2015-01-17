@@ -120,11 +120,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GKG-FN-1hT">
-                                <rect key="frame" x="16" y="148" width="280" height="162"/>
+                                <rect key="frame" x="16" y="204" width="280" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="442345509.20340103">
                                     <!--2015-01-07 17:45:09 +0000-->
                                 </date>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-VC-8TW">
+                                <rect key="frame" x="247" y="148" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsC-WF-z9u">
+                                <rect key="frame" x="16" y="148" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -143,6 +152,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="completedSwitch" destination="mcI-VC-8TW" id="BoT-hd-33B"/>
                         <outlet property="dueDatePicker" destination="GKG-FN-1hT" id="2ug-eG-sse"/>
                         <outlet property="subTaskTextField" destination="d4N-cY-Y4h" id="8yw-kj-yoD"/>
                         <outlet property="taskTextField" destination="DmM-mK-JCU" id="UDd-Ec-mtS"/>
