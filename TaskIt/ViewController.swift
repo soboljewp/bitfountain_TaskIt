@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if let numberOfSections = fetchedResultsController.sections?.count {
+            println(numberOfSections) // necessary for debugging numberOfSections
             return numberOfSections
         }
         else {
